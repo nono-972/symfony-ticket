@@ -20,19 +20,25 @@ class UserType extends AbstractType
                 'label'=>'Nom de l\'utilisateur',
             ])
             ->add('prenom', TextType::class, [
-                'label'=>''
+                'label'=>'Prenom de l\'utilisateur'
             ])
-            ->add('metier', ChoiceType::class, [
-                'label'=>''
+            ->add('metier', TextType::class, [
+                'label'=>'Metier' 
             ])
             ->add('roles', ChoiceType::class, [
-                'label'=>''
+                'label'=>'Rôles',
+                'choices' => [
+                    'ROLE_USER' => 'ROLE_USER',
+                    'ROLE_ADMIN' => 'ROLE_ADMIN',
+                    'ROLE_SUPER_ADMIN' => 'ROLE_SUPER_ADMIN',
+
+                ]
             ])
             ->add('email', EmailType::class, [
                 'label'=>'Email'
             ])
             ->add('password', PasswordType::class, [
-                'label'=>''
+                'label'=>'Mot de passe'
             ])
 
         ;

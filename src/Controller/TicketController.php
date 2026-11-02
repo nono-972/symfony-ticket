@@ -30,6 +30,9 @@ final class TicketController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+           $ticket->setUser($this->getUser());
+
             $entityManager->persist($ticket);
             $entityManager->flush();
 

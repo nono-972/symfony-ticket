@@ -25,7 +25,7 @@
                 <td>{{ ticket.description }}</td>
                 <td>{{ ticket.statut }}</td>
                 <td>{{ ticket.priorite }}</td>
-                <td>{{ ticket.DateCreation ? ticket.DateCreation|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ ticket.DateCreation ? ticket.DateCreation|date('Y-m-d') : '' }}</td>
                 <td>
                     <a href="{{ path('app_ticket_show', {'id': ticket.id}) }}">show</a>
                     <a href="{{ path('app_ticket_edit', {'id': ticket.id}) }}">edit</a>
